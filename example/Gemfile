@@ -4,3 +4,7 @@ source 'https://rubygems.org'
 ruby '>= 2.6.10'
 
 gem 'cocoapods', '>= 1.11.3'
+
+# ruby File.read(File.join(__dir__, '.ruby-version')).strip
+
+# gem 'cocoapods', '~> 1.11', '>= 1.11.3'

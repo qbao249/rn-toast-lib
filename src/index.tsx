@@ -20,3 +20,7 @@ const ToastLib = NativeModules.ToastLib
 export function multiply(a: number, b: number): Promise<number> {
   return ToastLib.multiply(a, b);
 }
+
+export const show = (text: string): Promise<void> => {
+  return ToastLib.show(text);
+};
