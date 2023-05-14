@@ -1,5 +1,8 @@
 package com.toastlib;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.Promise;
@@ -28,5 +31,11 @@ public class ToastLibModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void multiply(double a, double b, Promise promise) {
     promise.resolve(a * b);
+  }
+
+  @ReactMethod
+  public void show(String text) {
+    Context context = getReactApplicationContext();
+    Toast.makeText(context, text, Toast.LENGTH_LONG).show();
   }
 }
